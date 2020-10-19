@@ -72,6 +72,9 @@ def temp_monthly():
 @app.route("/api/v1.0/temp/<start>")
 @app.route("/api/v1.0/temp/<start>/<end>")
 def stats(start=None, end=None):
+    # to avoid SQLite objects created in a thread can only be used in that same thread
+    # we re-create the session variable locally in the function
+    session = Session(engine)
     sel = [func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)]           
 
     if not end: 
