@@ -1,5 +1,9 @@
 # my ignores
 app_old.py
+router.py
+login.py
+app_old.py
+templates/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
