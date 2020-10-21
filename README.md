@@ -26,13 +26,13 @@ Station = Base.classes.station
 
 6- Convert the results into list<br>
 ```
-june = june.all()<br>
-december = december.all()<br>
+june = june.all()
+december = december.all()
 ```
 7- Create pandas dataframe on each list<br>
 ```
-juneDF = pd.DataFrame(june, columns=['date','temperature'])<br>
-decemberDF = pd.DataFrame(december, columns=['date','temperature'])<br>
+juneDF = pd.DataFrame(june, columns=['date','temperature'])
+decemberDF = pd.DataFrame(december, columns=['date','temperature'])
 ```
 8- Gather descriptive stats on each dataframe<br>
 `juneDF.describe()`<br>:
@@ -53,3 +53,5 @@ We notice minor temperature difference between June and December with average te
 
 ![Oahu average precipitations over years](Resources/PrcpOverYears.png)<br>
 We notice that apart from year 2010 the average precipations do not change much between June and December
+
+### In conclusion we can say that Oahu is a suitable location for a sustainable surf and ice cream shop business year-round.
